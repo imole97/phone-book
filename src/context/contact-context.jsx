@@ -11,13 +11,43 @@ const uuid =  uuidv4
 const ContactProvider = ({children}) => {
 
     const [contacts, setContacts] = useState([
-        // {id:uuid(), name:'Imoleayo Adebanjo', email: 'imole@mail.com', phone: '0802339283'},
-        // {id:uuid(), name: 'Thomas Hardy10', email: 'thomashardy@mail.com', phone: '(171) 555-2222'},
-        // {id:uuid(), name: 'Dominique Perrier', email: 'dominiqueperrier@mail.com', phone: '(313) 555-5735'},
-        // {id:uuid(), name: 'Maria Anders', email: 'mariaanders@mail.com',  phone: '(503) 555-9931'},
-        // {id:uuid(), name: 'Fran Wilson', email: 'franwilson@mail.com', phone: '(204) 619-5731'},
-        // {id:uuid(), name: 'Martin Blank', email: 'martinblank@mail.com', phone: '(480) 631-2097'}
-    ])
+      {
+        id: uuid(),
+        name: "Imoleayo Adebanjo",
+        email: "imole@mail.com",
+        phone: "0802339283",
+      },
+      {
+        id: uuid(),
+        name: "Jane Doe",
+        email: "janedoe@mail.com",
+        phone: "08023380233",
+      },
+      {
+        id: uuid(),
+        name: "John Doe",
+        email: "johndoe@mail.com",
+        phone: "08023380200",
+      },
+      {
+        id: uuid(),
+        name: "Tony Stark",
+        email: "ironman@mail.com",
+        phone: "(503) 555-9931",
+      },
+      {
+        id: uuid(),
+        name: "Bruce Wayne",
+        email: "batman@mail.com",
+        phone: "(204) 619-5731",
+      },
+      {
+        id: uuid(),
+        name: "Bubu Hari",
+        email: "presi@mail.com",
+        phone: "08023380419",
+      },
+    ]);
 
 
     useEffect(() => {
