@@ -64,7 +64,7 @@ const Contact = ({ contact }) => {
           <EditContactForm contact={contact} />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant="secondary" onClick={handleCloseModal} className='bg-danger'>
             Close
           </Button>
         </Modal.Footer>

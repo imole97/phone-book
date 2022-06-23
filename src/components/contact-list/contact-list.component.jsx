@@ -105,15 +105,15 @@ const ContactList = () => {
         entries={currentContacts}
       />
 
-      <Modal show={showModal} onHide={handleCloseModal}>
-        <Modal.Header closeButton>
+      <Modal show={showModal} onHide={handleCloseModal} >
+        <Modal.Header closeButton >
           <Modal.Title>Add Contact</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <AddContactForm />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant="secondary" onClick={handleCloseModal} className='bg-danger'>
             Close
           </Button>
         </Modal.Footer>

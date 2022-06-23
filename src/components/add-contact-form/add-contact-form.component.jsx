@@ -62,7 +62,7 @@ const AddContactForm = () => {
                 required
                 />
             </Form.Group>
-            <Button variant="sucess" type="submit" block="true" className="btn">
+            <Button variant="sucess" type="submit" block="true">
                 Add New Contact
             </Button>
             </Form>

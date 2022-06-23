@@ -15,7 +15,7 @@ body {
 	background: #fff;
 	padding: 20px 25px;
 	border-radius: 3px;
-	min-width: 375px;
+	min-width: 500px;
 	box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 .table-title {        
@@ -32,11 +32,11 @@ body {
 	font-size: 24px;
 }
 .table-title .btn-group {
-	float: right;
+	/* float: right; */
 }
 .table-title .btn {
 	color: #fff;
-	float: right;
+	/* float: right; */
 	font-size: 13px;
 	border: none;
 	min-width: 50px;
@@ -151,6 +151,7 @@ table.table .avatar {
 .modal .modal-content {
 	border-radius: 3px;
 	font-size: 14px;
+	
 }
 .modal .modal-footer {
 	background: #ecf0f1;
@@ -163,6 +164,7 @@ table.table .avatar {
 	border-radius: 2px;
 	box-shadow: none;
 	border-color: #dddddd;
+	margin-bottom: 12px ;
 }
 .modal textarea.form-control {
 	resize: vertical;
@@ -170,6 +172,8 @@ table.table .avatar {
 .modal .btn {
 	border-radius: 2px;
 	min-width: 100px;
+	background-color: #198754;
+	color: white;
 }	
 .modal form label {
 	font-weight: normal;
