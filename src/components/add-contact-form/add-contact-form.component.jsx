@@ -1,5 +1,6 @@
 import {Form, Button} from 'react-bootstrap'
 import { useContext, useState } from 'react';
+import { toast } from 'react-toastify';
 import { v4 as uuidv4 } from "uuid";
 
 import { ContactContext } from '../../context/contact-context';
@@ -23,6 +24,7 @@ const AddContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         addContact(newContact)
+        toast.success('contact added successfully')
     }
 
     return (

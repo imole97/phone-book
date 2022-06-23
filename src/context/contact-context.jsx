@@ -1,6 +1,7 @@
 
 import { useState,createContext, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { toast } from "react-toastify";
 
 
 export const ContactContext = createContext({
@@ -72,6 +73,7 @@ const ContactProvider = ({children}) => {
     const deleteContact = (id) => {
         const updatedContacts = contacts.filter(contact => contact.id !== id)
         setContacts(updatedContacts)
+        toast.success('contact deleted successfully')
     }
 
     const updateContact = (id, updatedContact) => {

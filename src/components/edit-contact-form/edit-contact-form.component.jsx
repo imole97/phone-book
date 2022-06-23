@@ -1,6 +1,6 @@
 import { Form, Button } from "react-bootstrap";
 import { useContext, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { toast } from "react-toastify";
 
 import { ContactContext } from "../../context/contact-context";
 
@@ -25,6 +25,7 @@ const EditContactForm = ({ contact }) => {
   const submitEdit = (e) => {
     e.preventDefault()
     updateContact(id, editContact)
+    toast.success('contact edited successfully')
   }
 
   return (

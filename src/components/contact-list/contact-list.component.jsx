@@ -1,5 +1,7 @@
 import { Modal, Button, Alert, Form} from "react-bootstrap";
 import { useContext, useState, useEffect } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 import { ContactContext } from "../../context/contact-context";
 import Contact from "../contact/contact.component";
 import AddContactForm from "../add-contact-form/add-contact-form.component";
@@ -10,25 +12,14 @@ const ContactList = () => {
 
   const [searchField, setSearchField] = useState('')
   const [filteredContacts, setFilteredContacts] = useState(sortedContacts)
-  const [showAlert, setShowAlert] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(null)
   const [contactsPerPage] =  useState(2)
 
-  
 
   const handleShowModal = () => setShowModal(true); 
   const handleCloseModal = () => setShowModal(false);
-  const handleCloseAlert = () => setShowAlert(false);
-
   
-  const handleShowAlert = () => {
-    setShowAlert(true);
-    
-    setTimeout(() => {
-      handleCloseAlert();
-    }, 2000);
-  };
 
   useEffect(() => {
     const newFilteredContacts = sortedContacts.filter(contact => {
@@ -42,9 +33,7 @@ const ContactList = () => {
   useEffect(() => {
     handleCloseModal();
     
-    // return () => {
-    //   handleShowAlert()
-    // }
+
   }, [sortedContacts]);
   
   
@@ -61,14 +50,14 @@ const ContactList = () => {
 
   return (
     <>
-      <div className="table-title">
-        <div className="row">
-          <div className="col-sm-4">
+      <div className="table-title container">
+        <div className="row text-center g-3">
+          <div className="col-md">
             <h2>
               Manage <b>Contacts</b>
             </h2>
           </div>
-          <div className="col-sm-4">
+          <div className="col-md">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -76,7 +65,7 @@ const ContactList = () => {
               onChange={onSearchChange}
             />
           </div>
-          <div className="col-sm-4">
+          <div className="col-md">
             <Button
               onClick={handleShowModal}
               className="btn btn-success"
@@ -88,15 +77,8 @@ const ContactList = () => {
           </div>
         </div>
       </div>
-{/* 
-      <Alert
-        show={showAlert}
-        variant="success"
-        onClose={handleCloseAlert}
-        dismissible
-      >
-        Contact added successfully
-      </Alert> */}
+
+      <ToastContainer position="top-center"/>
 
       <table className="table table-striped table-hover">
         <thead>
